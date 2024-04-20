@@ -6,7 +6,395 @@
     <link href="output.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="text-4xl font-bold underline">Hello world!</h1>
-    <span class="text-red-600"> Test </span>
+    <header
+      class="py-4 sm:py-5 bg-green-100 sticky top-0 border-b border-green-400"
+      x-data="{expanded: false}"
+    >
+      <div class="container px-4 mx-auto sm:px-6 lg:px-8">
+        <nav class="flex items-center justify-between">
+          <div class="flex shrink-0">
+            <a href="#" title="" class="flex">
+              <img
+                class="w-auto h-8"
+                src="https://app.questive.club/questivelogo.svg"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div class="flex md:hidden">
+            <button
+              id="buttontoggle"
+              type="button"
+              class="text-gray-900"
+              @click="expanded = !expanded"
+              :aria-expanded="expanded"
+            >
+              <span id="open" x-show="!expanded" aria-hidden="true">
+                <svg
+                  class="w-7 h-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </span>
+
+              <span
+                id="close"
+                class="hidden"
+                x-show="expanded"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-7 h-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <div
+            class="hidden md:space-x-10 md:items-center md:justify-center md:flex"
+          >
+            <a
+              href="#"
+              title=""
+              class="text-xs font-bold tracking-widest text-gray-900 uppercase transition-all duration-200 hover:text-indigo-600"
+            >
+              Services
+            </a>
+
+            <a
+              href="#"
+              title=""
+              class="text-xs font-bold tracking-widest text-gray-900 uppercase transition-all duration-200 hover:text-indigo-600"
+            >
+              Latest Collections
+            </a>
+
+            <a
+              href="#"
+              title=""
+              class="text-xs font-bold tracking-widest text-gray-900 uppercase transition-all duration-200 hover:text-indigo-600"
+            >
+              Blog
+            </a>
+          </div>
+
+          <div class="hidden md:flex">
+            <a
+              href="#"
+              title=""
+              class="inline-flex items-center justify-center px-6 py-2 sm:py-2.5 text-base font-semibold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+              role="button"
+            >
+              Login
+            </a>
+
+            <a
+              href="#"
+              title=""
+              class="ml-5 inline-flex items-center justify-center px-6 py-2 sm:py-2.5 text-base font-semibold text-white transition-all duration-200 bg-gray-900 rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+              role="button"
+            >
+              Register
+            </a>
+          </div>
+        </nav>
+
+        <nav x-show="expanded" x-collapse>
+          <div id="mobilemenu" class="hidden" class="px-1 pt-8 pb-4">
+            <div class="grid gap-y-6">
+              <a
+                href="#"
+                title=""
+                class="flex items-center text-base font-medium text-gray-900 transition-all duration-200 focus:outline-none focus:ring-0"
+              >
+                Services
+              </a>
+
+              <a
+                href="#"
+                title=""
+                class="flex items-center text-base font-medium text-gray-900 transition-all duration-200 focus:outline-none focus:ring-0"
+              >
+                Latest Collections
+              </a>
+
+              <a
+                href="#"
+                title=""
+                class="flex items-center text-base font-medium text-gray-900 transition-all duration-200 focus:outline-none focus:ring-0"
+              >
+                Blog
+              </a>
+
+              <a
+                href="#"
+                title=""
+                class="inline-flex items-center justify-center px-6 py-2 text-base font-semibold leading-7 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-lg hover:bg-gray-600 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                role="button"
+              >
+                Join Email List
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="bg-gradient-to-b from-green-50 to-green-100">
+      <section class="py-10 sm:py-16 lg:py-24">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+            <div>
+              <h1 class="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
+                Explore, Share, and Discover Your
+                <div class="relative inline-flex">
+                  <span
+                    class="absolute inset-x-0 bottom-0 border-b-[30px] border-[#4ADE80]"
+                  ></span>
+                  <h1
+                    class="relative text-4xl font-bold text-black sm:text-6xl lg:text-7xl"
+                  >
+                    Next Great Read
+                  </h1>
+                </div>
+              </h1>
+
+              <p class="mt-8 text-base text-black sm:text-xl">
+                Join the community of book lovers who catalog, review, and find
+                new books all in one place.
+              </p>
+
+              <div class="mt-10 sm:flex sm:items-center sm:space-x-8">
+                <a
+                  href="#"
+                  title=""
+                  class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-600"
+                  role="button"
+                >
+                  Sign Up Free
+                </a>
+
+                <a
+                  href="#"
+                  title=""
+                  class="hidden inline-flex items-center mt-6 text-base font-semibold transition-all duration-200 sm:mt-0 hover:opacity-80"
+                >
+                  <svg
+                    class="w-10 h-10 mr-3"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      fill="#F97316"
+                      stroke="#F97316"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  Watch video
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <img
+                class="w-full"
+                src="/tailwindboilerplate/src/assets/library.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Features Section -->
+    <section class="py-12 bg-white sm:py-16 lg:py-20 xl:py-24">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div
+          class="grid items-center grid-cols-1 lg:grid-cols-2 lg:gap-x-16 xl:gap-x-24 gap-y-12"
+        >
+          <div
+            class="grid overflow-hidden bg-blue-100 lg:order-2 rounded-3xl place-items-center"
+          >
+            <div class="p-6 sm:p-12">
+              <h2
+                class="text-2xl font-semibold tracking-tight text-gray-900 sm:px-8 sm:text-3xl"
+              >
+                Get daily reports on email & stay updated always.
+              </h2>
+              <img
+                class="w-full mt-6 sm:mt-10"
+                src="https://landingfoliocom.imgix.net/store/collection/saasui/images/features/10/chart.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="xl:pr-24 lg:order-1">
+            <ul class="space-y-10 sm:space-y-14">
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-blue-600 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                  />
+                </svg>
+                <p class="ml-3 text-xl font-normal text-gray-900">
+                  <span class="font-semibold">Build Your Library :</span>
+                  Easily add and organize books on your digital shelf.
+                </p>
+              </li>
+
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-blue-600 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                  />
+                </svg>
+                <p class="ml-3 text-xl font-normal text-gray-900">
+                  <span class="font-semibold">Share Your Insights:</span>
+                  Post reviews, share your favorite quotes or the thing you
+                  learned.
+                </p>
+              </li>
+
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-blue-600 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                  />
+                </svg>
+                <p class="ml-3 text-xl font-normal text-gray-900">
+                  <span class="font-semibold">Interactive Wish List:</span>
+                  Mark books you find interesting and save them for later. Never
+                  lose track of a book you want to read.
+                </p>
+              </li>
+
+              <li class="flex items-start w-full">
+                <svg
+                  class="w-6 h-6 text-blue-600 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  />
+                </svg>
+                <p class="ml-3 text-xl font-normal text-gray-900">
+                  <span class="font-semibold">Discover New Titles:</span>
+                  Browse recommendations tailored to your tastes.
+                  <span
+                    class="float-right align-super text-sm w-full bottom-0 text-gray-500"
+                  >
+                    (Coming Soon)</span
+                  >
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const button = document.getElementById('buttontoggle');
+      const open = document.getElementById('open');
+      const close = document.getElementById('close');
+      const mobilemenu = document.getElementById('mobilemenu');
+
+      open.addEventListener('click', () => {
+        mobilemenu.classList.remove('hidden'); // Shows the mobile menu
+        open.classList.add('hidden'); // Hides the open icon
+        close.classList.remove('hidden'); // Shows the close icon
+      });
+
+      close.addEventListener('click', () => {
+        mobilemenu.classList.add('hidden'); // Hides the mobile menu
+        open.classList.remove('hidden'); // Shows the open icon
+        close.classList.add('hidden'); // Hides the close icon
+      });
+    </script>
+
+    <!-- <script>
+      const button = document.getElementById('buttontoggle');
+      const open = document.getElementById('open');
+      const close = document.getElementById('close');
+      const mobilemenu = document.getElementById('mobilemenu');
+
+      open.addEventListener('click', () => {
+        mobilemenu.classList.removeClass('hidden'); // Toggles visibility of the mobile menu
+        open.classList.addClass('hidden'); // Toggles visibility of the open icon
+        close.classList.removeClass('hidden'); // Toggles visibility of the close icon
+      });
+
+      close.addEventListener('click', () => {
+        mobilemenu.classList.addClass('hidden'); // Toggles visibility of the mobile menu
+        open.classList.removeClass('hidden'); // Toggles visibility of the open icon
+        close.classList.addClass('hidden'); // Toggles visibility of the close icon
+      });
+    </script> -->
   </body>
 </html>
