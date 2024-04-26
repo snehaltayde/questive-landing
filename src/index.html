@@ -7,7 +7,7 @@
   </head>
   <body>
     <header
-      class="py-4 sm:py-5 bg-green-100 sticky top-0 border-b border-green-400"
+      class="z-50 py-4 sm:py-5 bg-green-100 sticky top-0 border-b border-green-400"
       x-data="{expanded: false}"
     >
       <div class="container px-4 mx-auto sm:px-6 lg:px-8">
@@ -254,6 +254,17 @@
             >
               Build Your Library
             </h2>
+            <div
+              class="lg:hidden sm:hidden md:hidden relative pl-0 pr-0 sm:pl-6 md:px-0"
+            >
+              <div class="w-full mt-4 mb-10 ml-auto">
+                <img
+                  class="ml-auto w-full border border-gray-200 rounded-3xl shadow-xl"
+                  src="assets/library-2.png"
+                  alt=""
+                />
+              </div>
+            </div>
             <p class="mt-4 text-base leading-relaxed text-gray-600">
               Discover the heart of Questive—your personal digital library. This
               central feature allows you to effortlessly add, organize, and
@@ -263,7 +274,9 @@
             </p>
           </div>
 
-          <div class="relative pl-20 pr-6 sm:pl-6 md:px-0">
+          <div
+            class="hidden lg:block sm:block md:block relative pl-20 pr-6 sm:pl-6 md:px-0"
+          >
             <div class="w-full mt-4 mb-10 ml-auto">
               <img
                 class="ml-auto w-full border border-gray-200 rounded-3xl shadow-xl"
@@ -276,7 +289,7 @@
       </div>
     </section>
     <!-- 2 -->
-    <section id="Insights" class="py-12 bg-white sm:py-16 lg:py-20 xl:py-24">
+    <section id="Insights" class="py-12 bg-green-50 sm:py-16 lg:py-20 xl:py-24">
       <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div
           class="grid items-center grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-x-16 xl:gap-x-24"
@@ -319,6 +332,18 @@
             >
               Interactive Wish List
             </h2>
+
+            <div
+              class="lg:hidden sm:hidden md:hidden relative pl-0 pr-0 sm:pl-6 md:px-0"
+            >
+              <div class="relative w-full mt-4 mb-10 ml-auto">
+                <img
+                  class="ml-auto w-full border border-gray-200 rounded-3xl shadow-xl"
+                  src="assets/addbook.png"
+                  alt=""
+                />
+              </div>
+            </div>
             <p class="mt-4 text-base leading-relaxed text-gray-600">
               Also Keep track of the books that spark your interest with
               Questive's Interactive Wish List. This intuitive feature allows
@@ -327,7 +352,9 @@
             </p>
           </div>
 
-          <div class="relative pl-20 pr-6 sm:pl-6 md:px-0">
+          <div
+            class="hidden lg:block sm:block md:block relative pl-20 pr-6 sm:pl-6 md:px-0"
+          >
             <div class="relative w-full mt-4 mb-10 ml-auto">
               <img
                 class="ml-auto w-full border border-gray-200 rounded-3xl shadow-xl"
@@ -340,7 +367,10 @@
       </div>
     </section>
     <!-- 4 -->
-    <section id="questive-ai" class="py-12 bg-white sm:py-16 lg:py-20 xl:py-24">
+    <section
+      id="questive-ai"
+      class="py-12 bg-green-50 sm:py-16 lg:py-20 xl:py-24"
+    >
       <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div
           class="grid items-center grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-x-16 xl:gap-x-24"
@@ -395,7 +425,7 @@
     >
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div
-          class="flex flex-row items-center grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-x-16 xl:gap-x-24"
+          class="grid lg:flex md:flex lg:flex-row lg:items-center sm:grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-x-16 xl:gap-x-24"
         >
           <div>
             <a href="#" title="" class="flex">
